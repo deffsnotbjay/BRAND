@@ -1,0 +1,899 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BRAND — Home</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Funnel+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <header class="site-header" id="top">
+        <nav class="navbar" aria-label="Primary">
+            <ul class="nav-links" aria-label="Primary links">
+                <li>
+                    <a class="nav-link" href="#">
+                        <span class="swap" aria-hidden="true">
+                            <span class="swap__inner">
+                                <span class="swap__top">Home</span>
+                                <span class="swap__bottom">Home</span>
+                            </span>
+                        </span>
+                        <span class="sr-only">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link" href="projects.html">
+                        <span class="swap" aria-hidden="true">
+                            <span class="swap__inner">
+                                <span class="swap__top">Projects</span>
+                                <span class="swap__bottom">Projects</span>
+                            </span>
+                        </span>
+                        <span class="sr-only">Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#">
+                        <span class="swap" aria-hidden="true">
+                            <span class="swap__inner">
+                                <span class="swap__top">Studio</span>
+                                <span class="swap__bottom">Studio</span>
+                            </span>
+                        </span>
+                        <span class="sr-only">Studio</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="nav-link contact" href="contact.html">
+                        <span class="swap" aria-hidden="true">
+                            <span class="swap__inner">
+                                <span class="swap__top">Contacts</span>
+                                <span class="swap__bottom">Contacts</span>
+                            </span>
+                        </span>
+                        <span class="sr-only">Contacts</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="burger-btn" type="button" aria-expanded="false" aria-controls="mobileMenu">
+                    <span class="burger-btn__label">Menu</span>
+                    <span class="burger-btn__icon" aria-hidden="true">
+                        <span class="burger-btn__grid">
+                            <span></span><span></span><span></span><span></span>
+                        </span>
+                        <span class="burger-btn__minus"></span>
+                    </span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MOBILE OVERLAY MENU -->
+    <div class="mobile-menu" id="mobileMenu" hidden>
+        <div class="mobile-menu__panel">
+            <div class="mobile-menu__top" aria-label="Menu header">
+                <span class="mobile-menu__title">Menu</span>
+
+                <button class="icon-btn close-btn" type="button" aria-label="Close menu">
+                    <span class="close" aria-hidden="true">–</span>
+                </button>
+            </div>
+
+            <div class="mobile-menu__links" aria-label="Mobile links">
+                <a class="mobile-link" href="#">
+                    <span class="swap" aria-hidden="true">
+                        <span class="swap__inner">
+                            <span class="swap__top">Home</span>
+                            <span class="swap__bottom">Home</span>
+                        </span>
+                    </span>
+                    <span class="sr-only">Home</span>
+                </a>
+                <a class="mobile-link" href="projects.html">
+                    <span class="swap" aria-hidden="true">
+                        <span class="swap__inner">
+                            <span class="swap__top">Projects</span>
+                            <span class="swap__bottom">Projects</span>
+                        </span>
+                    </span>
+                    <span class="sr-only">Projects</span>
+                </a>
+                <a class="mobile-link" href="#">
+                    <span class="swap" aria-hidden="true">
+                        <span class="swap__inner">
+                            <span class="swap__top">Studio</span>
+                            <span class="swap__bottom">Studio</span>
+                        </span>
+                    </span>
+                    <span class="sr-only">Studio</span>
+                </a>
+                <a class="mobile-link" href="contact.html">
+                    <span class="swap" aria-hidden="true">
+                        <span class="swap__inner">
+                            <span class="swap__top">Contact</span>
+                            <span class="swap__bottom">Contact</span>
+                        </span>
+                    </span>
+                    <span class="sr-only">Contact</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <main>
+        <section class="hero" aria-label="Hero">
+            <div class="hero__bg" aria-hidden="true"></div>
+            <div class="hero__overlay" aria-hidden="true"></div>
+
+            <a class="hero-wordmark" href="#top" aria-label="Homepage">BRAND®</a>
+
+            <div class="hero__content">
+                <h1 class="hero__title">DIGITAL EXPERIENCES</h1>
+                <p class="hero__copy">
+                    WE DESIGN BRANDS, PRODUCTS, AND CAMPAIGNS THAT FEEL DISTINCTIVE, FUNCTIONAL, AND READY TO
+                    PERFORM.
+                </p>
+            </div>
+        </section>
+
+        <div class="hero-spacer" aria-hidden="true"></div>
+
+
+        <!-- SELECTED PROJECTS -->
+        <section class="projects" id="projects" aria-label="Selected Projects">
+            <div class="projects__inner">
+                <p class="projects__label">[ Selected Work ]</p>
+
+                <div class="projects__head">
+                    <h2 class="projects__headline">studio shaping brands for the next era</h2>
+                    <p class="projects__support">
+                        We partner with ambitious teams across branding, UI/UX, web, mobile, and motion to build work
+                        that feels precise, elevated, and built to last.
+                    </p>
+                </div>
+
+                <div class="editorial-grid">
+                    <a class="card-1-style" href="project-detail.html?id=joy" data-cursor-text="View Project"
+                        tabindex="0" aria-label="JOY — Seasonal Launch">
+                        <div class="img-container"><img
+                                src="https://otiktpyazqotihijbwhm.supabase.co/storage/v1/object/public/images/07a166f4-f137-4fa1-8728-74fa8582f248-Jorts%20by%20culture__city.jpeg">
+                        </div>
+                        <div class="project-meta">
+                            <span class="project-title">JOY <span class="project-subtitle">— SEASONAL
+                                    LAUNCH</span></span>
+                            <span class="project-year">2024</span>
+                        </div>
+                    </a>
+
+                    <a class="card-2" href="project-detail.html?id=jesse-party" data-cursor-text="View Project"
+                        tabindex="0" aria-label="JESSE — Creator Portfolio">
+                        <div class="img-container"><img
+                                src="https://img.sanishtech.com/u/e7dd5da46af7a735f490a0ebdf3bfa0f.webp">
+                        </div>
+                        <div class="project-meta">
+                            <span class="project-title">JESSE <span class="project-subtitle">— CREATOR
+                                    PORTFOLIO</span></span>
+                            <span class="project-year">2023</span>
+                        </div>
+                    </a>
+
+                    <a class="card-3" href="project-detail.html?id=mother" data-cursor-text="View Project" tabindex="0"
+                        aria-label="MOTHER — Editorial Platform">
+                        <div class="img-container"><img
+                                src="https://img.sanishtech.com/u/cb323cfff558a8ae86a5b6c0510be6ed.webp">
+                        </div>
+                        <div class="project-meta">
+                            <span class="project-title">MOTHER <span class="project-subtitle">— EDITORIAL
+                                    PLATFORM</span></span>
+                            <span class="project-year">2023</span>
+                        </div>
+                    </a>
+
+                    <a class="card-1-style" href="project-detail.html?id=angel" data-cursor-text="View Project"
+                        tabindex="0" aria-label="ANGEL — Personal Brand System">
+                        <div class="img-container"><img
+                                src="https://otiktpyazqotihijbwhm.supabase.co/storage/v1/object/public/images/1fc4f6d5-c5cc-4f99-bf6e-49f08c886deb-1000010292319574207.jpeg">
+                        </div>
+                        <div class="project-meta">
+                            <span class="project-title">ANGEL <span class="project-subtitle">— PERSONAL
+                                    BRAND SYSTEM</span></span>
+                            <span class="project-year">2024</span>
+                        </div>
+                    </a>
+
+                    <a class="card-1-style card-5-offset" href="project-detail.html?id=jesse-redemption"
+                        data-cursor-text="View Project" tabindex="0" aria-label="JESSE — Motion Identity">
+                        <div class="img-container"><img
+                                src="https://otiktpyazqotihijbwhm.supabase.co/storage/v1/object/public/images/7c1fe274-d7f3-4999-8dcd-e54c55cd3dc4-626704104433392107.jpeg">
+                        </div>
+                        <div class="project-meta">
+                            <span class="project-title">JESSE <span class="project-subtitle">— MOTION
+                                    IDENTITY</span></span>
+                            <span class="project-year">2023</span>
+                        </div>
+                    </a>
+                </div>
+
+                <a class="projects__all" href="projects.html" aria-label="View all work">
+                    <span>View all work</span>
+                    <span aria-hidden="true">→</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- SERVICES + PROCESS -->
+        <section class="services" id="services" aria-label="Services">
+            <div class="services__inner">
+                <div class="services__grid">
+                    <div class="services__left">
+                        <p class="services__label">[ Our Services ]</p>
+
+                        <div class="services-card">
+                            <div class="services-card__media" aria-hidden="true">
+                                <img src="https://otiktpyazqotihijbwhm.supabase.co/storage/v1/object/public/images/198985d7-1a00-47ef-ac1a-40ce467012e6-download%20(1).jpeg"
+                                    alt="" loading="lazy" />
+                            </div>
+
+                            <p class="services-card__copy">
+                                We define the strategic foundation of your brand, so every touchpoint feels deliberate,
+                                coherent, and unmistakably yours.
+                            </p>
+
+                            <a class="services-card__cta" href="#" aria-label="Start a project">
+                                <span>Start a project</span>
+                                <span aria-hidden="true">→</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="services__right">
+                        <div class="accordion" data-accordion aria-label="Service FAQs">
+                            <div class="accordion__item is-open">
+                                <button class="accordion__trigger" type="button" aria-expanded="true">
+                                    <span class="accordion__title">Brand Strategy</span>
+                                    <span class="accordion__icon" aria-hidden="true"></span>
+                                </button>
+                                <div class="accordion__panel">
+                                    <p class="accordion__desc">
+                                        Positioning, messaging, and identity systems that clarify who you are and why
+                                        you
+                                        matter.
+                                    </p>
+
+                                    <div class="accordion__tags" aria-label="Brand strategy deliverables">
+                                        <span class="tag">Brand Positioning</span>
+                                        <span class="tag">Visual Identity</span>
+                                        <span class="tag">Voice System</span>
+                                        <span class="tag">Creative Direction</span>
+                                    </div>
+
+                                    <div class="accordion__thumbs" aria-label="Selected work thumbnails">
+                                        <img src="https://otiktpyazqotihijbwhm.supabase.co/storage/v1/object/public/images/fd81e0ce-1715-4808-8a6d-5d94efd5775d-10062799164149777.jpeg"
+                                            alt="" loading="lazy" />
+                                        <img src="https://otiktpyazqotihijbwhm.supabase.co/storage/v1/object/public/images/353664e8-0b4c-4fd8-9134-c76f6b91dc6a-3377768467996880.jpeg"
+                                            alt="" loading="lazy" />
+                                        <img src="https://otiktpyazqotihijbwhm.supabase.co/storage/v1/object/public/images/aeeca3d9-57fa-4160-a9a7-d8675e6cfa62-912401205758008176.jpeg"
+                                            alt="" loading="lazy" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion__item">
+                                <button class="accordion__trigger" type="button" aria-expanded="false">
+                                    <span class="accordion__title">Web Design</span>
+                                    <span class="accordion__icon" aria-hidden="true"></span>
+                                </button>
+                                <div class="accordion__panel" hidden>
+                                    <p class="accordion__desc">
+                                        Elegant interfaces and scalable systems that guide users with clarity, speed,
+                                        and confidence.
+                                    </p>
+
+                                    <div class="accordion__tags" aria-label="Website design deliverables">
+                                        <span class="tag">UI/UX Design</span>
+                                        <span class="tag">Design Systems</span>
+                                        <span class="tag">Landing Pages</span>
+                                        <span class="tag">Responsive Layout</span>
+                                    </div>
+
+                                    <div class="accordion__thumbs" aria-label="Selected work thumbnails">
+                                        <img src="https://dummyimage.com/600x600/ececec/ececec" alt="" loading="lazy" />
+                                        <img src="https://dummyimage.com/600x600/ececec/ececec" alt="" loading="lazy" />
+                                        <img src="https://dummyimage.com/600x600/ececec/ececec" alt="" loading="lazy" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion__item">
+                                <button class="accordion__trigger" type="button" aria-expanded="false">
+                                    <span class="accordion__title">Motion &amp; Content</span>
+                                    <span class="accordion__icon" aria-hidden="true"></span>
+                                </button>
+                                <div class="accordion__panel" hidden>
+                                    <p class="accordion__desc">
+                                        Campaign assets, motion, and art direction shaped for launches, social, and
+                                        editorial moments.
+                                    </p>
+
+                                    <div class="accordion__tags" aria-label="Content creation deliverables">
+                                        <span class="tag">Art Direction</span>
+                                        <span class="tag">Motion Design</span>
+                                        <span class="tag">Campaign Assets</span>
+                                        <span class="tag">Social Content</span>
+                                    </div>
+
+                                    <div class="accordion__thumbs" aria-label="Selected work thumbnails">
+                                        <img src="https://dummyimage.com/600x600/ececec/ececec" alt="" loading="lazy" />
+                                        <img src="https://dummyimage.com/600x600/ececec/ececec" alt="" loading="lazy" />
+                                        <img src="https://dummyimage.com/600x600/ececec/ececec" alt="" loading="lazy" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion__item">
+                                <button class="accordion__trigger" type="button" aria-expanded="false">
+                                    <span class="accordion__title">Product Design</span>
+                                    <span class="accordion__icon" aria-hidden="true"></span>
+                                </button>
+                                <div class="accordion__panel" hidden>
+                                    <p class="accordion__desc">
+                                        Interfaces for apps and platforms with sharp hierarchy, thoughtful flows, and
+                                        premium detail.
+                                    </p>
+
+                                    <div class="accordion__tags" aria-label="Product design deliverables">
+                                        <span class="tag">User Flows</span>
+                                        <span class="tag">Wireframes</span>
+                                        <span class="tag">High-Fidelity UI</span>
+                                        <span class="tag">Prototypes</span>
+                                    </div>
+
+                                    <div class="accordion__thumbs" aria-label="Selected work thumbnails">
+                                        <img src="https://dummyimage.com/600x600/ececec/ececec" alt="" loading="lazy" />
+                                        <img src="https://dummyimage.com/600x600/ececec/ececec" alt="" loading="lazy" />
+                                        <img src="https://dummyimage.com/600x600/ececec/ececec" alt="" loading="lazy" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion__item">
+                                <button class="accordion__trigger" type="button" aria-expanded="false">
+                                    <span class="accordion__title">Digital Experience</span>
+                                    <span class="accordion__icon" aria-hidden="true"></span>
+                                </button>
+                                <div class="accordion__panel" hidden>
+                                    <p class="accordion__desc">
+                                        End-to-end experiences across web and product touchpoints, crafted for
+                                        performance and polish.
+                                    </p>
+
+                                    <div class="accordion__tags" aria-label="Digital experience deliverables">
+                                        <span class="tag">Strategy</span>
+                                        <span class="tag">Motion</span>
+                                        <span class="tag">Micro-interactions</span>
+                                        <span class="tag">Performance</span>
+                                        <span class="tag">Accessibility</span>
+                                    </div>
+
+                                    <div class="accordion__thumbs" aria-label="Selected work thumbnails">
+                                        <img src="https://dummyimage.com/600x600/ececec/ececec" alt="" loading="lazy" />
+                                        <img src="https://dummyimage.com/600x600/ececec/ececec" alt="" loading="lazy" />
+                                        <img src="https://dummyimage.com/600x600/ececec/ececec" alt="" loading="lazy" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="process" aria-label="Our Process">
+                    <p class="process__label">[ Our Process ]</p>
+
+                    <div class="process__grid">
+                        <article class="process-card" aria-label="Discovery">
+                            <div class="process-card__top">
+                                <span class="process-card__num">[01]</span>
+                                <span class="process-card__plus" aria-hidden="true">+</span>
+                            </div>
+                            <h3 class="process-card__title">Discovery</h3>
+                            <p class="process-card__desc">We start with a focused conversation to understand your goals,
+                                audience, and the opportunity ahead.</p>
+                        </article>
+
+                        <article class="process-card" aria-label="Designing">
+                            <div class="process-card__top">
+                                <span class="process-card__num">[02]</span>
+                                <span class="process-card__plus" aria-hidden="true">+</span>
+                            </div>
+                            <h3 class="process-card__title">Strategy</h3>
+                            <p class="process-card__desc">We define the direction, structure, and voice before any
+                                design begins.</p>
+                        </article>
+
+                        <article class="process-card" aria-label="Development">
+                            <div class="process-card__top">
+                                <span class="process-card__num">[03]</span>
+                                <span class="process-card__plus" aria-hidden="true">+</span>
+                            </div>
+                            <h3 class="process-card__title">Design</h3>
+                            <p class="process-card__desc">From concept to high-fidelity screens, we shape a system with
+                                clarity and restraint.</p>
+                        </article>
+
+                        <article class="process-card" aria-label="Launch">
+                            <div class="process-card__top">
+                                <span class="process-card__num">[04]</span>
+                                <span class="process-card__plus" aria-hidden="true">+</span>
+                            </div>
+                            <h3 class="process-card__title">Launch</h3>
+                            <p class="process-card__desc">We launch with precision, support, and the final refinements
+                                that make the work feel complete.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BENEFITS -->
+        <section class="benefits" aria-label="Benefits">
+            <div class="benefits__inner">
+                <div class="benefits__head">
+                    <div class="benefits__title">
+                        <p class="benefits__kicker">[ Benefits ]</p>
+                        <h2 class="benefits__headline">Why Clients <br> Choose BRAND</h2>
+                    </div>
+
+                    <div class="benefits__aside">
+                        <p class="benefits__copy">
+                            Premium thinking, fast iteration, and work that feels as considered as it performs. No
+                            noise. Just results.
+                        </p>
+
+                        <a class="benefits__cta" href="#" aria-label="Book a consultation">
+                            <span>Book a consultation</span>
+                            <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="benefits__grid" aria-label="Benefits list">
+                    <article class="benefit-card benefit-card--wide" aria-label="Strategic Clarity">
+                        <div class="benefit-card__media" aria-hidden="true">
+                            <img src="https://otiktpyazqotihijbwhm.supabase.co/storage/v1/object/public/images/8a1ec087-8bd3-4360-b031-ceead9afd90f-42221315255378571.jpeg"
+                                alt="" loading="lazy" />
+                        </div>
+                        <h3 class="benefit-card__title">Strategic Clarity</h3>
+                        <div class="benefit-card__bar">
+                            <span class="benefit-card__idx">[1]</span>
+                            <span class="benefit-card__note">Clear priorities. Better outcomes.</span>
+                        </div>
+                    </article>
+
+                    <article class="benefit-card benefit-card--feature" aria-label="Design Precision">
+                        <div class="benefit-card__media" aria-hidden="true">
+                            <img src="https://otiktpyazqotihijbwhm.supabase.co/storage/v1/object/public/images/9997400d-3e1c-49f9-bf5c-6593b4ec4c87-591519732300652360.jpeg"
+                                alt="" loading="lazy" />
+                        </div>
+                        <h3 class="benefit-card__title">Design Precision</h3>
+                        <div class="benefit-card__bar">
+                            <span class="benefit-card__idx">[2]</span>
+                            <span class="benefit-card__note">Every detail earns its place.</span>
+                        </div>
+                    </article>
+
+                    <article class="benefit-card" aria-label="Technical Craft">
+                        <div class="benefit-card__media" aria-hidden="true">
+                            <img src="https://otiktpyazqotihijbwhm.supabase.co/storage/v1/object/public/images/30df49d8-8c21-4ca3-b7c4-764592c871d6-Ig_%20r3bellis.jpeg"
+                                alt="" loading="lazy" />
+                        </div>
+                        <h3 class="benefit-card__title">Technical Craft</h3>
+                        <div class="benefit-card__bar">
+                            <span class="benefit-card__idx">[3]</span>
+                            <span class="benefit-card__note">Built with speed and stability.</span>
+                        </div>
+                    </article>
+
+                    <article class="benefit-card" aria-label="Flexible Delivery">
+                        <div class="benefit-card__media" aria-hidden="true">
+                            <img src="https://otiktpyazqotihijbwhm.supabase.co/storage/v1/object/public/images/6f271d64-6c22-44e4-b05f-2574b1ab5ba4-655555289550454385.jpeg"
+                                alt="" loading="lazy" />
+                        </div>
+                        <h3 class="benefit-card__title">Flexible Delivery</h3>
+                        <div class="benefit-card__bar">
+                            <span class="benefit-card__idx">[4]</span>
+                            <span class="benefit-card__note">Strategy. Design. Build.</span>
+                        </div>
+                    </article>
+
+                    <article class="benefit-card" aria-label="Award-Worthy Finish">
+                        <div class="benefit-card__media" aria-hidden="true">
+                            <img src="https://otiktpyazqotihijbwhm.supabase.co/storage/v1/object/public/images/6f430ae2-7e2d-4a71-8a92-f726ef51c488-738097826468343713.jpeg"
+                                alt="" loading="lazy" />
+                        </div>
+                        <h3 class="benefit-card__title">Award-Worthy Finish</h3>
+                        <div class="benefit-card__bar">
+                            <span class="benefit-card__idx">[5]</span>
+                            <span class="benefit-card__note">Polished from first screen to final state.</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- AWARDS -->
+        <section class="awards" aria-label="Awards">
+            <div class="awards__inner">
+                <p class="awards__kicker">[ Awards ]</p>
+                <h2 class="awards__headline">Recognition.</h2>
+
+                <div class="awards__table" aria-label="Awards list">
+                    <div class="award-row">
+                        <div class="award-row__name">Awwwards Honoree</div>
+                        <div class="award-row__date">2025</div>
+                        <div class="award-row__role">Brand Experience</div>
+                        <div class="award-row__place">Global</div>
+                    </div>
+
+                    <div class="award-row">
+                        <div class="award-row__name">FWA Site of the Day</div>
+                        <div class="award-row__date">2024</div>
+                        <div class="award-row__role">UI/UX Design</div>
+                        <div class="award-row__place">Online</div>
+                    </div>
+
+                    <div class="award-row">
+                        <div class="award-row__name">CSS Design Awards</div>
+                        <div class="award-row__date">2024</div>
+                        <div class="award-row__role">Web Design</div>
+                        <div class="award-row__place">Global</div>
+                    </div>
+
+                    <div class="award-row">
+                        <div class="award-row__name">Behance Editorial</div>
+                        <div class="award-row__date">2023</div>
+                        <div class="award-row__role">Creative Direction</div>
+                        <div class="award-row__place">Worldwide</div>
+                    </div>
+
+                    <div class="award-row award-row--marker">
+                        <div class="award-row__name">
+                            Webby Honoree
+                        </div>
+                        <div class="award-row__date">2022</div>
+                        <div class="award-row__role">Digital Experience</div>
+                        <div class="award-row__place">New York</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- <div class="scroll-container" id="scrollContainer">
+            <div class="sticky-scene">
+                <div class="stage">
+                    <div class="carousel" id="carousel"></div>
+                </div>
+
+                <div class="section-label">
+                    <span>© BRAND Studio</span>
+                    <span>Clients</span>
+                </div>
+
+                <div class="counter" id="counter">01 / 05</div>
+                <div class="dots" id="dots"></div>
+
+                <div class="hint" id="hint">
+                    <span class="hint-text">Scroll</span>
+                    <div class="hint-line"></div>
+                </div>
+            </div>
+        </div> -->
+
+
+        <!-- TESTIMONIALS -->
+        <section class="testimonials" id="testimonials" aria-label="Testimonials">
+            <div class="testimonials__inner">
+                <p class="testimonials__label">[ Testimonials ]</p>
+
+                <div class="testimonials__slider" aria-live="polite">
+                    <!-- Slide 1 -->
+                    <div class="testimonial-slide is-active" data-slide="0">
+                        <blockquote class="testimonial__quote">
+                            Working with this team gave our brand a real point of view. The new site feels premium,
+                            converts better, and finally matches the ambition of the business.
+                        </blockquote>
+
+                        <div class="testimonial__author">
+                            <div class="testimonial__avatar">
+                                <img src="assets/avatar-emma.png" alt="Emma Carter" loading="lazy" />
+                            </div>
+                            <div class="testimonial__info">
+                                <span class="testimonial__name">Emma Carter</span>
+                                <span class="testimonial__role">Founder, Neonverse</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="testimonial-slide" data-slide="1">
+                        <blockquote class="testimonial__quote">
+                            They didn't just design a website, they built a system. Every detail, from typography to
+                            motion, was crafted with intention.
+                        </blockquote>
+
+                        <div class="testimonial__author">
+                            <div class="testimonial__avatar">
+                                <img src="assets/avatar-daniel.png" alt="Daniel Osei" loading="lazy" />
+                            </div>
+                            <div class="testimonial__info">
+                                <span class="testimonial__name">Daniel Osei</span>
+                                <span class="testimonial__role">Marketing Lead, Arclight Studio</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="testimonial-slide" data-slide="2">
+                        <blockquote class="testimonial__quote">
+                            From the first call to final delivery, everything was seamless. The new identity elevated
+                            our brand—clean, precise, and exactly what we envisioned.
+                        </blockquote>
+
+                        <div class="testimonial__author">
+                            <div class="testimonial__avatar">
+                                <img src="assets/avatar-sophia.png" alt="Sophia Krane" loading="lazy" />
+                            </div>
+                            <div class="testimonial__info">
+                                <span class="testimonial__name">Sophia Krane</span>
+                                <span class="testimonial__role">Brand Director, Forma Collective</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonials__nav" aria-label="Testimonial navigation">
+                    <button class="testimonials__btn testimonials__btn--prev" type="button"
+                        aria-label="Previous testimonial">
+                        <span aria-hidden="true">←</span>
+                    </button>
+                    <button class="testimonials__btn testimonials__btn--next" type="button"
+                        aria-label="Next testimonial">
+                        <span aria-hidden="true">→</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQS -->
+        <section class="faq" id="faqs" aria-label="FAQs">
+            <div class="faq__inner">
+                <p class="faq__label">[ FAQs ]</p>
+                <h2 class="faq__headline">Curious About<br />Something?</h2>
+
+                <div class="faq-card" aria-label="Book a call">
+                    <div class="faq-card__avatar" aria-hidden="true">
+                        <img src="assets/avatar-daniel.png" alt="" loading="lazy" />
+                    </div>
+
+                    <h3 class="faq-card__title">Short on time?</h3>
+                    <p class="faq-card__copy">
+                        Your project deserves strategy that actually works.<br />
+                        Let's start with a conversation.
+                    </p>
+
+                    <a class="faq-card__btn" href="#" aria-label="Book a consultation">Book a consultation</a>
+
+                    <p class="faq-card__foot">Do you prefer email communication?</p>
+                    <a class="faq-card__email" href="mailto:hello@brandstudio.com">
+                        <span class="faq-card__email-icon" aria-hidden="true">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 6.5H20V17.5H4V6.5Z" stroke="currentColor" stroke-width="1.6" />
+                                <path d="M4 7L12 13L20 7" stroke="currentColor" stroke-width="1.6" />
+                            </svg>
+                        </span>
+                        <span class="faq-card__email-text">hello@brandstudio.com</span>
+                    </a>
+                </div>
+
+                <div class="faq__list">
+                    <div class="accordion faq-accordion" data-accordion aria-label="Frequently asked questions">
+                        <div class="accordion__item">
+                            <button class="accordion__trigger" type="button" aria-expanded="false">
+                                <span class="accordion__title">Can you build a full brand system?</span>
+                                <span class="accordion__icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="accordion__panel" hidden>
+                                <p class="accordion__desc">Yes. We can create a full identity system or scope logo
+                                    work as a standalone deliverable depending on your needs.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion__item">
+                            <button class="accordion__trigger" type="button" aria-expanded="false">
+                                <span class="accordion__title">Do you provide ongoing support?</span>
+                                <span class="accordion__icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="accordion__panel" hidden>
+                                <p class="accordion__desc">Ongoing support is available for updates, iterations, and
+                                    launches. We’ll recommend a cadence based on your scope.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion__item">
+                            <button class="accordion__trigger" type="button" aria-expanded="false">
+                                <span class="accordion__title">Do you only work in Webflow or Framer?</span>
+                                <span class="accordion__icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="accordion__panel" hidden>
+                                <p class="accordion__desc">No—those are common options, but we can design for other
+                                    stacks or hand off clean files for your developer to build.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion__item">
+                            <button class="accordion__trigger" type="button" aria-expanded="false">
+                                <span class="accordion__title">What’s not included?</span>
+                                <span class="accordion__icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="accordion__panel" hidden>
+                                <p class="accordion__desc">Complex integrations, custom backends, and extensive
+                                    copywriting aren’t included unless explicitly scoped in the project plan.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion__item">
+                            <button class="accordion__trigger" type="button" aria-expanded="false">
+                                <span class="accordion__title">How does payment work?</span>
+                                <span class="accordion__icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="accordion__panel" hidden>
+                                <p class="accordion__desc">Most projects start with a deposit to reserve the schedule,
+                                    with remaining payments split by milestones.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion__item">
+                            <button class="accordion__trigger" type="button" aria-expanded="false">
+                                <span class="accordion__title">What if I already have a design?</span>
+                                <span class="accordion__icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="accordion__panel" hidden>
+                                <p class="accordion__desc">We can refine what you have, build a system around it, or
+                                    translate it into a polished website that matches your brand standards.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA MARQUEE -->
+        <section class="cta-marquee" aria-label="Call to action">
+            <div class="cta-marquee__inner">
+                <h2 class="cta-marquee__title">TURNING IDEAS<br />INTO DIGITAL SYSTEMS</h2>
+                <a class="cta-marquee__link" href="#" aria-label="Let's Talk">Let's Talk</a>
+            </div>
+
+            <div class="cta-marquee__rail" aria-hidden="true">
+                <div class="cta-marquee__track">
+                    <div class="cta-marquee__item"><img
+                            src="https://otiktpyazqotihijbwhm.supabase.co/storage/v1/object/public/images/07a166f4-f137-4fa1-8728-74fa8582f248-Jorts%20by%20culture__city.jpeg"
+                            alt="" loading="lazy" /></div>
+                    <div class="cta-marquee__item"><img
+                            src="https://otiktpyazqotihijbwhm.supabase.co/storage/v1/object/public/images/4cd6894c-3b3a-401e-85bb-b13ed6ac03fc-All%20eyes%20on%20you.jpeg"
+                            alt="" loading="lazy" /></div>
+                    <div class="cta-marquee__item"><img
+                            src="https://otiktpyazqotihijbwhm.supabase.co/storage/v1/object/public/images/d79ac78f-38f6-46fb-bdc7-469483b37dec-Bridal%20Party.jpeg"
+                            alt="" loading="lazy" /></div>
+                    <div class="cta-marquee__item"><img
+                            src="https://otiktpyazqotihijbwhm.supabase.co/storage/v1/object/public/images/1fc4f6d5-c5cc-4f99-bf6e-49f08c886deb-1000010292319574207.jpeg"
+                            alt="" loading="lazy" /></div>
+                    <div class="cta-marquee__item"><img
+                            src="https://otiktpyazqotihijbwhm.supabase.co/storage/v1/object/public/images/7c1fe274-d7f3-4999-8dcd-e54c55cd3dc4-626704104433392107.jpeg"
+                            alt="" loading="lazy" /></div>
+
+                    <!-- Duplicate for seamless loop -->
+                    <div class="cta-marquee__item"><img
+                            src="https://otiktpyazqotihijbwhm.supabase.co/storage/v1/object/public/images/07a166f4-f137-4fa1-8728-74fa8582f248-Jorts%20by%20culture__city.jpeg"
+                            alt="" loading="lazy" /></div>
+                    <div class="cta-marquee__item"><img
+                            src="https://otiktpyazqotihijbwhm.supabase.co/storage/v1/object/public/images/4cd6894c-3b3a-401e-85bb-b13ed6ac03fc-All%20eyes%20on%20you.jpeg"
+                            alt="" loading="lazy" /></div>
+                    <div class="cta-marquee__item"><img
+                            src="https://otiktpyazqotihijbwhm.supabase.co/storage/v1/object/public/images/d79ac78f-38f6-46fb-bdc7-469483b37dec-Bridal%20Party.jpeg"
+                            alt="" loading="lazy" /></div>
+                    <div class="cta-marquee__item"><img
+                            src="https://otiktpyazqotihijbwhm.supabase.co/storage/v1/object/public/images/1fc4f6d5-c5cc-4f99-bf6e-49f08c886deb-1000010292319574207.jpeg"
+                            alt="" loading="lazy" /></div>
+                    <div class="cta-marquee__item"><img
+                            src="https://otiktpyazqotihijbwhm.supabase.co/storage/v1/object/public/images/7c1fe274-d7f3-4999-8dcd-e54c55cd3dc4-626704104433392107.jpeg"
+                            alt="" loading="lazy" /></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer" aria-label="Footer">
+        <div class="site-footer__inner">
+            <div class="site-footer__top">
+                <div class="site-footer__signup" aria-label="Newsletter">
+                    <h2 class="site-footer__title">Stay connected</h2>
+                    <p class="site-footer__copy">Join our newsletter and stay updated on the latest<br />trends in
+                        branding and digital design</p>
+
+                    <form class="site-footer__form" action="#" method="post">
+                        <label class="sr-only" for="footerEmail">Enter your email</label>
+                        <input class="site-footer__input" id="footerEmail" name="email" type="email"
+                            autocomplete="email" placeholder="Enter your Email" required />
+                        <button class="site-footer__submit" type="submit">Submit</button>
+                    </form>
+                </div>
+
+                <div class="site-footer__links" aria-label="Footer links">
+                    <nav class="site-footer__col" aria-label="Explore">
+                        <p class="site-footer__heading">EXPLORE</p>
+                        <a class="site-footer__link" href="#">Home</a>
+                        <a class="site-footer__link" href="projects.html">Projects</a>
+                        <a class="site-footer__link" href="#">Blogs</a>
+                        <a class="site-footer__link" href="#">Studio</a>
+                        <a class="site-footer__link" href="#">Contact</a>
+                    </nav>
+
+                    <nav class="site-footer__col" aria-label="Social">
+                        <p class="site-footer__heading">SOCIAL</p>
+                        <a class="site-footer__link" href="#">Twitter</a>
+                        <a class="site-footer__link" href="#">Behance</a>
+                        <a class="site-footer__link" href="#">Instagram</a>
+                        <a class="site-footer__link" href="#">Dribbble</a>
+                    </nav>
+
+                    <div class="site-footer__col" aria-label="Contact us">
+                        <p class="site-footer__heading">CONTACT US</p>
+                        <a class="site-footer__link" href="mailto:hello@brandstudio.com">hello@brandstudio.com</a>
+                        <a class="site-footer__link" href="tel:+123456789">+(12) 3456789</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="site-footer__wordmark" aria-label="BRAND">
+                <span class="site-footer__word">BRAND</span>
+            </div>
+
+            <div class="site-footer__bottom" aria-label="Legal links">
+                <div class="site-footer__legal">
+                    <a class="site-footer__meta" href="#">Privacy Policy</a>
+                    <a class="site-footer__meta" href="#">Terms of Service</a>
+                </div>
+                <div class="site-footer__credit">
+                    <span class="site-footer__meta">Created by manuel.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom site cursor element -->
+    <div class="site-cursor" id="siteCursor" aria-hidden="true">
+        <div class="site-cursor__dot" aria-hidden="true"></div>
+        <div class="site-cursor__label" aria-hidden="true"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

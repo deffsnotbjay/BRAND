@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BRAND — Projects</title>
+    <meta name="description"
+        content="Explore our selected branding, UI/UX, web, motion, and digital experience case studies. Built for ambitious brands." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Funnel+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="projects.css" />
+</head>
+
+<body class="projects-page">
+
+    <!-- NAVBAR -->
+    <header class="site-header" id="top">
+        <nav class="navbar" aria-label="Primary">
+            <ul class="nav-links" aria-label="Primary links">
+                <li>
+                    <a class="nav-link" href="index.html">
+                        <span class="swap" aria-hidden="true">
+                            <span class="swap__inner">
+                                <span class="swap__top">Home</span>
+                                <span class="swap__bottom">Home</span>
+                            </span>
+                        </span>
+                        <span class="sr-only">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link nav-link--active" href="projects.html" aria-current="page">
+                        <span class="swap" aria-hidden="true">
+                            <span class="swap__inner">
+                                <span class="swap__top">Projects</span>
+                                <span class="swap__bottom">Projects</span>
+                            </span>
+                        </span>
+                        <span class="sr-only">Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#">
+                        <span class="swap" aria-hidden="true">
+                            <span class="swap__inner">
+                                <span class="swap__top">Studio</span>
+                                <span class="swap__bottom">Studio</span>
+                            </span>
+                        </span>
+                        <span class="sr-only">Studio</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="nav-link contact" href="contact.html">
+                        <span class="swap" aria-hidden="true">
+                            <span class="swap__inner">
+                                <span class="swap__top">Contacts</span>
+                                <span class="swap__bottom">Contacts</span>
+                            </span>
+                        </span>
+                        <span class="sr-only">Contacts</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="burger-btn" type="button" aria-expanded="false" aria-controls="mobileMenu">
+                    <span class="burger-btn__label">Menu</span>
+                    <span class="burger-btn__icon" aria-hidden="true">
+                        <span class="burger-btn__grid">
+                            <span></span><span></span><span></span><span></span>
+                        </span>
+                        <span class="burger-btn__minus"></span>
+                    </span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MOBILE OVERLAY MENU -->
+    <div class="mobile-menu" id="mobileMenu" hidden>
+        <div class="mobile-menu__panel">
+            <div class="mobile-menu__top" aria-label="Menu header">
+                <span class="mobile-menu__title">Menu</span>
+                <button class="icon-btn close-btn" type="button" aria-label="Close menu">
+                    <span class="close" aria-hidden="true">–</span>
+                </button>
+            </div>
+            <div class="mobile-menu__links" aria-label="Mobile links">
+                <a class="mobile-link" href="index.html">
+                    <span class="swap" aria-hidden="true">
+                        <span class="swap__inner">
+                            <span class="swap__top">Home</span>
+                            <span class="swap__bottom">Home</span>
+                        </span>
+                    </span>
+                    <span class="sr-only">Home</span>
+                </a>
+                <a class="mobile-link" href="projects.html">
+                    <span class="swap" aria-hidden="true">
+                        <span class="swap__inner">
+                            <span class="swap__top">Projects</span>
+                            <span class="swap__bottom">Projects</span>
+                        </span>
+                    </span>
+                    <span class="sr-only">Projects</span>
+                </a>
+                <a class="mobile-link" href="#">
+                    <span class="swap" aria-hidden="true">
+                        <span class="swap__inner">
+                            <span class="swap__top">Studio</span>
+                            <span class="swap__bottom">Studio</span>
+                        </span>
+                    </span>
+                    <span class="sr-only">Studio</span>
+                </a>
+                <a class="mobile-link" href="contact.html">
+                    <span class="swap" aria-hidden="true">
+                        <span class="swap__inner">
+                            <span class="swap__top">Contact</span>
+                            <span class="swap__bottom">Contact</span>
+                        </span>
+                    </span>
+                    <span class="sr-only">Contact</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE WORDMARK (top-left, like hero) -->
+    <a class="page-wordmark" href="index.html" aria-label="Homepage">BRAND®</a>
+
+    <!-- MAIN -->
+    <main class="projects-main">
+
+        <!-- PAGE HEADER -->
+        <section class="projects-hero" aria-label="Projects header">
+            <div class="projects-hero__inner">
+                <p class="projects-hero__label">[ Projects ]</p>
+
+                <div class="projects-hero__head">
+                    <h1 class="projects-hero__headline">Selected work<br>for ambitious brands</h1>
+                    <p class="projects-hero__support">
+                        We partner with teams across branding, product design, websites, and motion. Here are a few
+                        recent case studies.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS GRID -->
+        <section class="projects-grid-section" aria-label="All Projects">
+            <div class="projects-grid-inner">
+
+                <!-- Row 1 -->
+                <div class="pg-row">
+                    <a class="pg-card" href="project-detail.html?id=solarc" data-cursor-text="View Project" tabindex="0"
+                        aria-label="Solarc — Sports Club Platform">
+                        <div class="pg-card__media">
+                            <img src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=900&q=80"
+                                alt="Solarc — Sports Club Platform" loading="lazy" />
+                        </div>
+                        <div class="pg-card__meta">
+                            <span class="pg-card__title">Solarc <span class="pg-card__sub">— Sports Club
+                                    Platform</span></span>
+                            <span class="pg-card__year">2024</span>
+                        </div>
+                    </a>
+
+                    <a class="pg-card" href="project-detail.html?id=vanta" data-cursor-text="View Project" tabindex="0"
+                        aria-label="Vanta — Studio Rebrand">
+                        <div class="pg-card__media">
+                            <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=900&q=80"
+                                alt="Vanta — Studio Rebrand" loading="lazy" />
+                        </div>
+                        <div class="pg-card__meta">
+                            <span class="pg-card__title">Vanta <span class="pg-card__sub">— Studio
+                                    Rebrand</span></span>
+                            <span class="pg-card__year">2025</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="pg-row">
+                    <a class="pg-card" href="project-detail.html?id=joy" data-cursor-text="View Project" tabindex="0"
+                        aria-label="JOY — Seasonal Launch">
+                        <div class="pg-card__media">
+                            <img src="https://otiktpyazqotihijbwhm.supabase.co/storage/v1/object/public/images/07a166f4-f137-4fa1-8728-74fa8582f248-Jorts%20by%20culture__city.jpeg"
+                                alt="JOY — Seasonal Launch" loading="lazy" />
+                        </div>
+                        <div class="pg-card__meta">
+                            <span class="pg-card__title">JOY <span class="pg-card__sub">— Seasonal Launch</span></span>
+                            <span class="pg-card__year">2024</span>
+                        </div>
+                    </a>
+
+                    <a class="pg-card" href="project-detail.html?id=jesse-party" data-cursor-text="View Project"
+                        tabindex="0" aria-label="Jesse — Creator Portfolio">
+                        <div class="pg-card__media">
+                            <img src="https://img.sanishtech.com/u/e7dd5da46af7a735f490a0ebdf3bfa0f.webp"
+                                alt="Jesse — Creator Portfolio" loading="lazy" />
+                        </div>
+                        <div class="pg-card__meta">
+                            <span class="pg-card__title">JESSE <span class="pg-card__sub">— Creator
+                                    Portfolio</span></span>
+                            <span class="pg-card__year">2023</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Row 3 -->
+                <div class="pg-row">
+                    <a class="pg-card" href="project-detail.html?id=mother" data-cursor-text="View Project" tabindex="0"
+                        aria-label="Mother — Editorial Platform">
+                        <div class="pg-card__media">
+                            <img src="https://img.sanishtech.com/u/cb323cfff558a8ae86a5b6c0510be6ed.webp"
+                                alt="Mother — Editorial Platform" loading="lazy" />
+                        </div>
+                        <div class="pg-card__meta">
+                            <span class="pg-card__title">MOTHER <span class="pg-card__sub">— Editorial
+                                    Platform</span></span>
+                            <span class="pg-card__year">2023</span>
+                        </div>
+                    </a>
+
+                    <a class="pg-card" href="project-detail.html?id=angel" data-cursor-text="View Project" tabindex="0"
+                        aria-label="Angel — Personal Brand System">
+                        <div class="pg-card__media">
+                            <img src="https://otiktpyazqotihijbwhm.supabase.co/storage/v1/object/public/images/1fc4f6d5-c5cc-4f99-bf6e-49f08c886deb-1000010292319574207.jpeg"
+                                alt="Angel — Personal Brand System" loading="lazy" />
+                        </div>
+                        <div class="pg-card__meta">
+                            <span class="pg-card__title">ANGEL <span class="pg-card__sub">— Personal Brand
+                                    System</span></span>
+                            <span class="pg-card__year">2024</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Row 4 -->
+                <div class="pg-row">
+                    <a class="pg-card" href="project-detail.html?id=jesse-redemption" data-cursor-text="View Project"
+                        tabindex="0" aria-label="Jesse — Motion Identity">
+                        <div class="pg-card__media">
+                            <img src="https://otiktpyazqotihijbwhm.supabase.co/storage/v1/object/public/images/7c1fe274-d7f3-4999-8dcd-e54c55cd3dc4-626704104433392107.jpeg"
+                                alt="Jesse — Motion Identity" loading="lazy" />
+                        </div>
+                        <div class="pg-card__meta">
+                            <span class="pg-card__title">JESSE <span class="pg-card__sub">— Motion
+                                    Identity</span></span>
+                            <span class="pg-card__year">2023</span>
+                        </div>
+                    </a>
+
+                    <a class="pg-card" href="project-detail.html?id=forma" data-cursor-text="View Project" tabindex="0"
+                        aria-label="Forma — Commerce Launch">
+                        <div class="pg-card__media">
+                            <img src="https://otiktpyazqotihijbwhm.supabase.co/storage/v1/object/public/images/6f430ae2-7e2d-4a71-8a92-f726ef51c488-738097826468343713.jpeg"
+                                alt="Forma — Commerce Launch" loading="lazy" />
+                        </div>
+                        <div class="pg-card__meta">
+                            <span class="pg-card__title">FORMA <span class="pg-card__sub">— Commerce
+                                    Launch</span></span>
+                            <span class="pg-card__year">2025</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Row 5 -->
+                <div class="pg-row">
+                    <a class="pg-card" href="project-detail.html?id=orbit" data-cursor-text="View Project" tabindex="0"
+                        aria-label="Orbit — Editorial Experience">
+                        <div class="pg-card__media">
+                            <img src="https://otiktpyazqotihijbwhm.supabase.co/storage/v1/object/public/images/9997400d-3e1c-49f9-bf5c-6593b4ec4c87-591519732300652360.jpeg"
+                                alt="Orbit — Editorial Experience" loading="lazy" />
+                        </div>
+                        <div class="pg-card__meta">
+                            <span class="pg-card__title">ORBIT <span class="pg-card__sub">— Editorial
+                                    Experience</span></span>
+                            <span class="pg-card__year">2024</span>
+                        </div>
+                    </a>
+
+                    <a class="pg-card" href="project-detail.html?id=lune" data-cursor-text="View Project" tabindex="0"
+                        aria-label="Lune — Beauty Narrative">
+                        <div class="pg-card__media">
+                            <img src="https://otiktpyazqotihijbwhm.supabase.co/storage/v1/object/public/images/6f271d64-6c22-44e4-b05f-2574b1ab5ba4-655555289550454385.jpeg"
+                                alt="Lune — Beauty Narrative" loading="lazy" />
+                        </div>
+                        <div class="pg-card__meta">
+                            <span class="pg-card__title">LUNE <span class="pg-card__sub">— Beauty
+                                    Narrative</span></span>
+                            <span class="pg-card__year">2025</span>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FAQS -->
+        <section class="faq" id="faqs" aria-label="FAQs">
+            <div class="faq__inner">
+                <p class="faq__label">[ FAQs ]</p>
+                <h2 class="faq__headline">Curious About<br />Something?</h2>
+
+                <div class="faq-card" aria-label="Book a call">
+                    <div class="faq-card__avatar" aria-hidden="true">
+                        <img src="assets/avatar-daniel.png" alt="" loading="lazy" />
+                    </div>
+
+                    <h3 class="faq-card__title">Short on time?</h3>
+                    <p class="faq-card__copy">
+                        Your project deserves strategy that actually works.<br />
+                        Let's start with a conversation.
+                    </p>
+
+                    <a class="faq-card__btn" href="#" aria-label="Book a consultation">Book a consultation</a>
+
+                    <p class="faq-card__foot">Do you prefer email communication?</p>
+                    <a class="faq-card__email" href="mailto:hello@brandstudio.com">
+                        <span class="faq-card__email-icon" aria-hidden="true">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 6.5H20V17.5H4V6.5Z" stroke="currentColor" stroke-width="1.6" />
+                                <path d="M4 7L12 13L20 7" stroke="currentColor" stroke-width="1.6" />
+                            </svg>
+                        </span>
+                        <span class="faq-card__email-text">hello@brandstudio.com</span>
+                    </a>
+                </div>
+
+                <div class="faq__list">
+                    <div class="accordion faq-accordion" data-accordion aria-label="Frequently asked questions">
+                        <div class="accordion__item">
+                            <button class="accordion__trigger" type="button" aria-expanded="false">
+                                <span class="accordion__title">Can you build a full brand system?</span>
+                                <span class="accordion__icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="accordion__panel" hidden>
+                                <p class="accordion__desc">Yes. We can create a full identity system or scope logo
+                                    work as a standalone deliverable depending on your needs.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion__item">
+                            <button class="accordion__trigger" type="button" aria-expanded="false">
+                                <span class="accordion__title">Do you provide ongoing support?</span>
+                                <span class="accordion__icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="accordion__panel" hidden>
+                                <p class="accordion__desc">Ongoing support is available for updates, iterations, and
+                                    launches. We’ll recommend a cadence based on your scope.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion__item">
+                            <button class="accordion__trigger" type="button" aria-expanded="false">
+                                <span class="accordion__title">Do you only work in Webflow or Framer?</span>
+                                <span class="accordion__icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="accordion__panel" hidden>
+                                <p class="accordion__desc">No—those are common options, but we can design for other
+                                    stacks or hand off clean files for your developer to build.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion__item">
+                            <button class="accordion__trigger" type="button" aria-expanded="false">
+                                <span class="accordion__title">What’s not included?</span>
+                                <span class="accordion__icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="accordion__panel" hidden>
+                                <p class="accordion__desc">Complex integrations, custom backends, and extensive
+                                    copywriting aren’t included unless explicitly scoped in the project plan.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion__item">
+                            <button class="accordion__trigger" type="button" aria-expanded="false">
+                                <span class="accordion__title">How does payment work?</span>
+                                <span class="accordion__icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="accordion__panel" hidden>
+                                <p class="accordion__desc">Most projects start with a deposit to reserve the schedule,
+                                    with remaining payments split by milestones.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion__item">
+                            <button class="accordion__trigger" type="button" aria-expanded="false">
+                                <span class="accordion__title">What if I already have a design?</span>
+                                <span class="accordion__icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="accordion__panel" hidden>
+                                <p class="accordion__desc">We can refine what you have, build a system around it, or
+                                    translate it into a polished website that matches your brand standards.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer" aria-label="Footer">
+        <div class="site-footer__inner">
+            <div class="site-footer__top">
+                <div class="site-footer__signup" aria-label="Newsletter">
+                    <h2 class="site-footer__title">Stay connected</h2>
+                    <p class="site-footer__copy">Join our newsletter and stay updated on the latest<br>trends in
+                        branding and digital design</p>
+
+                    <form class="site-footer__form" action="#" method="post">
+                        <label class="sr-only" for="footerEmail">Enter your email</label>
+                        <input class="site-footer__input" id="footerEmail" name="email" type="email"
+                            autocomplete="email" placeholder="Enter your Email" required />
+                        <button class="site-footer__submit" type="submit">Submit</button>
+                    </form>
+                </div>
+
+                <div class="site-footer__links" aria-label="Footer links">
+                    <nav class="site-footer__col" aria-label="Explore">
+                        <p class="site-footer__heading">EXPLORE</p>
+                        <a class="site-footer__link" href="index.html">Home</a>
+                        <a class="site-footer__link" href="projects.html">Projects</a>
+                        <a class="site-footer__link" href="#">Blogs</a>
+                        <a class="site-footer__link" href="#">Studio</a>
+                        <a class="site-footer__link" href="#">Contact</a>
+                    </nav>
+
+                    <nav class="site-footer__col" aria-label="Social">
+                        <p class="site-footer__heading">SOCIAL</p>
+                        <a class="site-footer__link" href="#">Twitter</a>
+                        <a class="site-footer__link" href="#">Behance</a>
+                        <a class="site-footer__link" href="#">Instagram</a>
+                        <a class="site-footer__link" href="#">Dribbble</a>
+                    </nav>
+
+                    <div class="site-footer__col" aria-label="Contact us">
+                        <p class="site-footer__heading">CONTACT US</p>
+                        <a class="site-footer__link" href="mailto:hello@brandstudio.com">hello@brandstudio.com</a>
+                        <a class="site-footer__link" href="tel:+123456789">+(12) 3456789</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="site-footer__wordmark" aria-label="BRAND">
+                <span class="site-footer__word">BRAND</span>
+            </div>
+
+            <div class="site-footer__bottom" aria-label="Legal links">
+                <div class="site-footer__legal">
+                    <a class="site-footer__meta" href="#">Privacy Policy</a>
+                    <a class="site-footer__meta" href="#">Terms of Service</a>
+                </div>
+                <div class="site-footer__credit">
+                    <span class="site-footer__meta">Created by manuel.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom site cursor -->
+    <div class="site-cursor" id="siteCursor" aria-hidden="true">
+        <div class="site-cursor__dot" aria-hidden="true"></div>
+        <div class="site-cursor__label" aria-hidden="true"></div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="projects.js"></script>
+</body>
+
+</html>

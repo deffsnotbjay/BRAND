@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BRAND — Featured Carousel</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #080808;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .scroll-container {
+            height: 600vh;
+            position: relative;
+        }
+
+        .sticky-scene {
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .stage {
+            perspective: 1200px;
+            perspective-origin: 50% 50%;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .carousel {
+            position: relative;
+            transform-style: preserve-3d;
+            width: 0;
+            height: 0;
+        }
+
+        .card {
+            position: absolute;
+            width: 400px;
+            height: 270px;
+            border-radius: 20px;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            backface-visibility: visible;
+            will-change: transform, opacity;
+            cursor: pointer;
+        }
+
+        .card-inner {
+            position: absolute;
+            inset: 0;
+            transform-style: preserve-3d;
+        }
+
+        .card-face {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            inset: 0;
+            border-radius: 20px;
+            overflow: hidden;
+            backface-visibility: hidden;
+        }
+
+        .card-back {
+            position: absolute;
+            inset: 0;
+            border-radius: 20px;
+            overflow: hidden;
+            transform: rotateY(180deg);
+            backface-visibility: hidden;
+            background:
+                repeating-linear-gradient(135deg,
+                    rgba(255, 255, 255, 0.06) 0,
+                    rgba(255, 255, 255, 0.06) 1px,
+                    transparent 1px,
+                    transparent 10px),
+                radial-gradient(1200px 520px at 20% 25%, rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0) 55%),
+                linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.88));
+        }
+
+        .card-back::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 30% 60%, rgba(0, 0, 0, 0.0) 0%, rgba(0, 0, 0, 0.36) 100%),
+                linear-gradient(to top, rgba(0, 0, 0, 0.62) 0%, rgba(0, 0, 0, 0.0) 62%);
+            border-radius: 20px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .card-placeholder {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-overlay {
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(to bottom, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.12)),
+                radial-gradient(ellipse at 30% 60%, rgba(0, 0, 0, 0.0) 0%, rgba(0, 0, 0, 0.35) 100%),
+                linear-gradient(to top, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.0) 62%);
+            border-radius: 20px;
+        }
+
+        .card-border {
+            position: absolute;
+            inset: 0;
+            border-radius: 20px;
+            border: 0.5px solid rgba(255, 255, 255, 0.12);
+            pointer-events: none;
+        }
+
+        .card-border--back {
+            border-color: rgba(255, 255, 255, 0.16);
+        }
+
+        .card-back .card-border,
+        .card-back .card-label {
+            z-index: 1;
+        }
+
+        .card-label {
+            position: absolute;
+            bottom: 22px;
+            left: 26px;
+            color: rgba(255, 255, 255, 0.92);
+            font-size: 26px;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            text-shadow: 0 1px 14px rgba(0, 0, 0, 0.7);
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .card-label--back {
+            font-size: 22px;
+            color: rgba(255, 255, 255, 0.78);
+        }
+
+        .hint {
+            position: absolute;
+            bottom: 32px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            z-index: 20;
+            opacity: 1;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+        }
+
+        .hint.hidden {
+            opacity: 0;
+        }
+
+        .hint-text {
+            font-size: 10px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .hint-line {
+            width: 1px;
+            height: 36px;
+            background: rgba(255, 255, 255, 0.18);
+            animation: hint-pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes hint-pulse {
+
+            0%,
+            100% {
+                opacity: 0.18;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        .dots {
+            position: absolute;
+            bottom: 34px;
+            right: 36px;
+            display: flex;
+            gap: 7px;
+            z-index: 20;
+        }
+
+        .dot {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.18);
+            transition: background 0.35s ease, transform 0.35s ease;
+        }
+
+        .dot.active {
+            background: rgba(255, 255, 255, 0.85);
+            transform: scale(1.4);
+        }
+
+        .counter {
+            position: absolute;
+            top: 36px;
+            right: 36px;
+            font-size: 11px;
+            letter-spacing: 0.1em;
+            color: rgba(255, 255, 255, 0.28);
+            z-index: 20;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .section-label {
+            position: absolute;
+            top: 36px;
+            left: 36px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            z-index: 20;
+        }
+
+        .section-label span:first-child {
+            font-size: 10px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.22);
+        }
+
+        .section-label span:last-child {
+            font-size: 15px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.7);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="scroll-container" id="scrollContainer">
+        <div class="sticky-scene">
+            <div class="stage">
+                <div class="carousel" id="carousel"></div>
+            </div>
+
+            <div class="section-label">
+                <span>© BRAND Studio</span>
+                <span>Clients</span>
+            </div>
+
+            <div class="counter" id="counter">01 / 05</div>
+            <div class="dots" id="dots"></div>
+
+            <div class="hint" id="hint">
+                <span class="hint-text">Scroll</span>
+                <div class="hint-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const CARDS = [
+            { label: 'Cairo.', bg: '#1b2820', accent: '#2e4a38', image: null, video: null },
+            { label: 'Manila.', bg: '#1a2535', accent: '#253b55', image: null, video: null },
+            { label: 'oslo.', bg: '#221810', accent: '#4a3020', image: null, video: null },
+            { label: 'thur', bg: '#242424', accent: '#3a3a3a', image: null, video: null },
+            { label: 'Nairobi.', bg: '#1c1c2c', accent: '#2e2e48', image: null, video: null },
+        ];
+
+        /*
+          ARC on Y-axis (horizontal rotation = left/right swing + depth).
+          Then we tilt the entire arc plane diagonally so the sweep goes
+          from bottom-right → top-left instead of flat left → right.
+    
+          ARC_DEGREES  : how much of the circle cards travel through (270°)
+          RADIUS       : size of the arc — bigger = cards more spread out
+          DIAG_TILT    : how steeply the arc is tilted upward (degrees).
+                         0 = flat horizontal, 45 = steep diagonal, 90 = vertical
+        */
+        const ARC_DEGREES = 210;
+        const RADIUS = 556;   // ~10px visual gap (avoid overlap)
+        const DIAG_TILT = 20;    // diagonal tilt — bottom-right to top-left
+        const CARD_W = 400;
+        const CARD_H = 270;
+
+        const N = CARDS.length;
+        const carousel = document.getElementById('carousel');
+        const dotsEl = document.getElementById('dots');
+        const counter = document.getElementById('counter');
+        const hint = document.getElementById('hint');
+
+        CARDS.forEach((c, i) => {
+            const card = document.createElement('div');
+            card.className = 'card';
+
+            let mediaHTML = '';
+            if (c.video) {
+                mediaHTML = `<video class="card-placeholder" autoplay muted loop playsinline>
+                       <source src="${c.video}"></video>`;
+            } else if (c.image) {
+                mediaHTML = `<img class="card-placeholder" src="${c.image}" alt="${c.label}"/>`;
+            } else {
+                mediaHTML = `<img class="card-placeholder" src="https://dummyimage.com/1200x800/ececec/ececec" alt="${c.label}" loading="lazy"/>`;
+            }
+
+            card.innerHTML = `
+                <div class="card-inner">
+                    <div class="card-face">
+                        ${mediaHTML}
+                        <div class="card-overlay"></div>
+                        <div class="card-border"></div>
+                        <div class="card-label">${c.label}</div>
+                    </div>
+                    <div class="card-back">
+                        <div class="card-border card-border--back"></div>
+                        <div class="card-label card-label--back">${c.label}</div>
+                    </div>
+                </div>`;
+
+            carousel.appendChild(card);
+
+            const dot = document.createElement('div');
+            dot.className = 'dot' + (i === 0 ? ' active' : '');
+            dotsEl.appendChild(dot);
+        });
+
+        const cardEls = carousel.querySelectorAll('.card');
+        const dotEls = dotsEl.querySelectorAll('.dot');
+        const tiltRad = (DIAG_TILT * Math.PI) / 180;
+
+        function setActive(idx) {
+            dotEls.forEach((d, i) => d.classList.toggle('active', i === idx));
+            counter.textContent =
+                String(idx + 1).padStart(2, '0') + ' / ' + String(N).padStart(2, '0');
+        }
+
+        function render(progress) {
+            /*
+              Each card sits at a fixed angle on a 270° arc.
+              Card 0 is at angle 0, card N-1 is at angle 270°.
+      
+              The arc's "front" (angle=135°, midpoint) faces the viewer.
+              As progress goes 0→1, we rotate the arc so each card passes
+              through the front position.
+      
+              Arc position for card i at scroll progress p:
+                baseAngle  = i * (270 / (N-1))         [card's fixed spot on arc]
+                viewAngle  = p * 270                    [how far arc has rotated]
+                angle      = baseAngle - viewAngle      [offset from front]
+      
+              From angle we get x (left/right) and z (depth) on the horizontal arc.
+              Then we apply the diagonal tilt: rotate the x-axis result into
+              both x and y screen coordinates using DIAG_TILT.
+      
+              RIGHT → LEFT direction:
+                Cards with positive offset (not yet reached) sit to the RIGHT.
+                Cards with negative offset (already passed)  sit to the LEFT.
+                x = sin(rad) * RADIUS → positive sin = right ✓
+                After tilt: screen_x = x * cos(tilt)  → still right for positive
+                            screen_y = x * sin(tilt)  → positive = DOWN (below center)
+                So positive offset = right + below = bottom-right ✓
+                   negative offset = left  + above = top-left    ✓
+            */
+
+            const step = ARC_DEGREES / (N - 1);
+            const scrollShift = progress * ARC_DEGREES;
+
+            let closestIdx = 0;
+            let closestDist = Infinity;
+
+            cardEls.forEach((card, i) => {
+                const angle = (i * step) - scrollShift;
+                const rad = (angle * Math.PI) / 180;
+
+                // Base arc position (Y-axis rotation)
+                const arcX = Math.sin(rad) * RADIUS;   // left/right on flat arc
+                const arcZ = Math.cos(rad) * RADIUS - RADIUS; // depth (0 at front)
+
+                // Apply diagonal tilt: decompose arcX into screen X and Y
+                // cos(tilt) keeps horizontal component, sin(tilt) adds vertical
+                const screenX = arcX * Math.cos(tiltRad);  // right for positive arcX
+                const screenY = arcX * Math.sin(tiltRad);  // down  for positive arcX
+
+                const absAngle = Math.abs(angle);
+
+                // Scale: center card = 1.0, side cards shrink
+                const scale = Math.max(0.38, 1 - absAngle * 0.0032);
+
+                // Opacity: center = 1, edges fade out
+                const opacity = Math.max(0.08, 1 - absAngle * 0.008);
+
+                // z-index: center card on top
+                const zIndex = Math.round(500 - absAngle * 8);
+
+                // Rotate as cards travel so the back becomes visible as they move away
+                const rotateY = Math.max(-175, Math.min(175, -angle * 1.2));
+
+                card.style.transform =
+                    `translate3d(${screenX - (CARD_W / 2)}px, ${screenY - (CARD_H / 2)}px, ${arcZ}px) rotateY(${rotateY}deg) scale(${scale})`;
+                card.style.opacity = opacity;
+                card.style.zIndex = zIndex;
+
+                if (absAngle < closestDist) {
+                    closestDist = absAngle;
+                    closestIdx = i;
+                }
+            });
+
+            setActive(closestIdx);
+            hint.classList.toggle('hidden', progress > 0.04);
+        }
+
+        const scrollContainer = document.getElementById('scrollContainer');
+
+        function onScroll() {
+            const rect = scrollContainer.getBoundingClientRect();
+            const scrolled = -rect.top;
+            const total = scrollContainer.offsetHeight - window.innerHeight;
+            const progress = Math.min(1, Math.max(0, scrolled / total));
+            render(progress);
+        }
+
+        window.addEventListener('scroll', onScroll, { passive: true });
+        render(0);
+    </script>
+
+</body>
+
+</html>

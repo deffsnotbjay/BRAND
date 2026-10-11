@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BRAND — Contact</title>
+    <meta name="description"
+        content="Have a project in mind? Start a conversation with BRAND and shape your next digital experience." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Funnel+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="contact.css" />
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <header class="site-header" id="top">
+        <nav class="navbar" aria-label="Primary">
+            <ul class="nav-links" aria-label="Primary links">
+                <li>
+                    <a class="nav-link" href="index.html">
+                        <span class="swap" aria-hidden="true">
+                            <span class="swap__inner">
+                                <span class="swap__top">Home</span>
+                                <span class="swap__bottom">Home</span>
+                            </span>
+                        </span>
+                        <span class="sr-only">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link" href="projects.html">
+                        <span class="swap" aria-hidden="true">
+                            <span class="swap__inner">
+                                <span class="swap__top">Projects</span>
+                                <span class="swap__bottom">Projects</span>
+                            </span>
+                        </span>
+                        <span class="sr-only">Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#">
+                        <span class="swap" aria-hidden="true">
+                            <span class="swap__inner">
+                                <span class="swap__top">Studio</span>
+                                <span class="swap__bottom">Studio</span>
+                            </span>
+                        </span>
+                        <span class="sr-only">Studio</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link contact is-active" href="contact.html">
+                        <span class="swap" aria-hidden="true">
+                            <span class="swap__inner">
+                                <span class="swap__top">Contact</span>
+                                <span class="swap__bottom">Contact</span>
+                            </span>
+                        </span>
+                        <span class="sr-only">Contact</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="burger-btn" type="button" aria-expanded="false" aria-controls="mobileMenu">
+                    <span class="burger-btn__label">Menu</span>
+                    <span class="burger-btn__icon" aria-hidden="true">
+                        <span class="burger-btn__grid">
+                            <span></span><span></span><span></span><span></span>
+                        </span>
+                        <span class="burger-btn__minus"></span>
+                    </span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MOBILE OVERLAY MENU -->
+    <div class="mobile-menu" id="mobileMenu" hidden>
+        <div class="mobile-menu__panel">
+            <div class="mobile-menu__top" aria-label="Menu header">
+                <span class="mobile-menu__title">Menu</span>
+                <button class="icon-btn close-btn" type="button" aria-label="Close menu">
+                    <span class="close" aria-hidden="true">–</span>
+                </button>
+            </div>
+            <div class="mobile-menu__links" aria-label="Mobile links">
+                <a class="mobile-link" href="index.html">
+                    <span class="swap" aria-hidden="true">
+                        <span class="swap__inner">
+                            <span class="swap__top">Home</span>
+                            <span class="swap__bottom">Home</span>
+                        </span>
+                    </span>
+                    <span class="sr-only">Home</span>
+                </a>
+                <a class="mobile-link" href="projects.html">
+                    <span class="swap" aria-hidden="true">
+                        <span class="swap__inner">
+                            <span class="swap__top">Projects</span>
+                            <span class="swap__bottom">Projects</span>
+                        </span>
+                    </span>
+                    <span class="sr-only">Projects</span>
+                </a>
+                <a class="mobile-link" href="#">
+                    <span class="swap" aria-hidden="true">
+                        <span class="swap__inner">
+                            <span class="swap__top">Studio</span>
+                            <span class="swap__bottom">Studio</span>
+                        </span>
+                    </span>
+                    <span class="sr-only">Studio</span>
+                </a>
+                <a class="mobile-link" href="contact.html">
+                    <span class="swap" aria-hidden="true">
+                        <span class="swap__inner">
+                            <span class="swap__top">Contact</span>
+                            <span class="swap__bottom">Contact</span>
+                        </span>
+                    </span>
+                    <span class="sr-only">Contact</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- CONTACT HERO -->
+        <section class="ct-hero" aria-label="Contact hero">
+            <div class="ct-hero__inner">
+                <p class="ct-kicker">[ Get in Touch ]</p>
+                <h1 class="ct-headline">Got a project<br>in mind?<br>Let's Talk.</h1>
+            </div>
+        </section>
+
+        <!-- CONTACT BODY -->
+        <section class="ct-body" aria-label="Contact form and info">
+            <div class="ct-body__inner">
+
+                <!-- LEFT: Info card -->
+                <aside class="ct-aside" aria-label="Quick contact info">
+                    <div class="ct-card">
+                        <div class="ct-card__avatar" aria-hidden="true">
+                            <img src="https://otiktpyazqotihijbwhm.supabase.co/storage/v1/object/public/images/8a1ec087-8bd3-4360-b031-ceead9afd90f-42221315255378571.jpeg"
+                                alt="BRAND founder" loading="lazy" />
+                        </div>
+                        <h2 class="ct-card__title">Short on time?</h2>
+                        <p class="ct-card__copy">Your next launch deserves clarity and momentum.<br>Let's start with a
+                            conversation.</p>
+                        <a class="ct-card__btn" href="#" aria-label="Book an intro call">
+                            Book a consultation <span aria-hidden="true">→</span>
+                        </a>
+                        <p class="ct-card__alt">Do you prefer email communication?</p>
+                        <a class="ct-card__email" href="mailto:hello@brandstudio.com" aria-label="Send us an email">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <rect x="2" y="4" width="20" height="16" rx="2" />
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                            </svg>
+                            hello@brandstudio.com
+                        </a>
+                    </div>
+                </aside>
+
+                <!-- RIGHT: Contact form -->
+                <div class="ct-form-wrap" aria-label="Contact form">
+                    <form class="ct-form" id="contactForm" action="#" method="post" novalidate>
+
+                        <!-- Row 1: Name + Email -->
+                        <div class="ct-form__row ct-form__row--split">
+                            <div class="ct-form__field">
+                                <label class="ct-form__label" for="ctName">Name</label>
+                                <input class="ct-form__input" id="ctName" name="name" type="text"
+                                    placeholder="Your full name" autocomplete="name" required />
+                            </div>
+                            <div class="ct-form__field">
+                                <label class="ct-form__label" for="ctEmail">Email</label>
+                                <input class="ct-form__input" id="ctEmail" name="email" type="email"
+                                    placeholder="your@email.com" autocomplete="email" required />
+                            </div>
+                        </div>
+
+                        <!-- Row 2: Project description -->
+                        <div class="ct-form__row">
+                            <div class="ct-form__field">
+                                <label class="ct-form__label" for="ctMessage">Tell us about your project</label>
+                                <textarea class="ct-form__textarea" id="ctMessage" name="message"
+                                    placeholder="Share your goals, timeline, and priorities." rows="5"
+                                    required></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Row 3: Services -->
+                        <div class="ct-form__row">
+                            <fieldset class="ct-form__fieldset" aria-label="How can we help?">
+                                <legend class="ct-form__label">How can we help?</legend>
+                                <div class="ct-tags" role="group" aria-label="Service options">
+                                    <label class="ct-tag">
+                                        <input type="checkbox" name="service" value="branding" />
+                                        <span>Branding</span>
+                                    </label>
+                                    <label class="ct-tag">
+                                        <input type="checkbox" name="service" value="uiux" />
+                                        <span>UI/UX Design</span>
+                                    </label>
+                                    <label class="ct-tag">
+                                        <input type="checkbox" name="service" value="web" />
+                                        <span>Website Development</span>
+                                    </label>
+                                    <label class="ct-tag">
+                                        <input type="checkbox" name="service" value="mobile" />
+                                        <span>Mobile App Design</span>
+                                    </label>
+                                    <label class="ct-tag">
+                                        <input type="checkbox" name="service" value="strategy" />
+                                        <span>Creative Strategy</span>
+                                    </label>
+                                </div>
+                            </fieldset>
+                        </div>
+
+                        <!-- Row 4: Budget -->
+                        <div class="ct-form__row">
+                            <div class="ct-form__field">
+                                <label class="ct-form__label" for="ctBudget">Budget</label>
+                                <div class="ct-select-wrap">
+                                    <select class="ct-form__select" id="ctBudget" name="budget">
+                                        <option value="" disabled selected>Select...</option>
+                                        <option value="under-1k">Under $1,000</option>
+                                        <option value="1k-5k">$1,000 – $5,000</option>
+                                        <option value="5k-10k">$5,000 – $10,000</option>
+                                        <option value="10k-25k">$10,000 – $25,000</option>
+                                        <option value="25k+">$25,000+</option>
+                                    </select>
+                                    <span class="ct-select-arrow" aria-hidden="true">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <polyline points="6 9 12 15 18 9" />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Submit -->
+                        <div class="ct-form__row">
+                            <button class="ct-form__submit" id="ctSubmit" type="submit">
+                                Send Request
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- MAILTO DISPLAY -->
+        <section class="ct-mailto" aria-label="Studio email address">
+            <div class="ct-mailto__inner">
+                <p class="ct-kicker">[ Mail us at ]</p>
+                <a class="ct-mailto__address" href="mailto:hello@brandstudio.com"
+                    aria-label="Email hello@brandstudio.com">
+                    hello@brandstudio.com
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer" aria-label="Footer">
+        <div class="site-footer__inner">
+            <div class="site-footer__top">
+                <div class="site-footer__signup" aria-label="Newsletter">
+                    <h2 class="site-footer__title">Stay connected</h2>
+                    <p class="site-footer__copy">Join our newsletter and stay updated on the latest<br>trends in
+                        branding and digital design</p>
+                    <form class="site-footer__form" action="#" method="post">
+                        <label class="sr-only" for="footerEmail">Enter your email</label>
+                        <input class="site-footer__input" id="footerEmail" name="email" type="email"
+                            autocomplete="email" placeholder="Enter your Email" required />
+                        <button class="site-footer__submit" type="submit">Submit</button>
+                    </form>
+                </div>
+
+                <div class="site-footer__links" aria-label="Footer links">
+                    <nav class="site-footer__col" aria-label="Explore">
+                        <p class="site-footer__heading">EXPLORE</p>
+                        <a class="site-footer__link" href="index.html">Home</a>
+                        <a class="site-footer__link" href="projects.html">Projects</a>
+                        <a class="site-footer__link" href="#">Studio</a>
+                        <a class="site-footer__link" href="contact.html">Contact</a>
+                    </nav>
+                    <nav class="site-footer__col" aria-label="Social">
+                        <p class="site-footer__heading">SOCIAL</p>
+                        <a class="site-footer__link" href="#">Twitter</a>
+                        <a class="site-footer__link" href="#">Behance</a>
+                        <a class="site-footer__link" href="#">Instagram</a>
+                        <a class="site-footer__link" href="#">Dribbble</a>
+                    </nav>
+                    <div class="site-footer__col" aria-label="Contact us">
+                        <p class="site-footer__heading">CONTACT US</p>
+                        <a class="site-footer__link" href="mailto:hello@brandstudio.com">hello@brandstudio.com</a>
+                        <a class="site-footer__link" href="tel:+123456789">+(12) 3456789</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="site-footer__wordmark" aria-label="BRAND">
+                <span class="site-footer__word">BRAND</span>
+            </div>
+
+            <div class="site-footer__bottom" aria-label="Legal links">
+                <div class="site-footer__legal">
+                    <a class="site-footer__meta" href="#">Privacy Policy</a>
+                    <a class="site-footer__meta" href="#">Terms of Service</a>
+                </div>
+                <div class="site-footer__credit">
+                    <span class="site-footer__meta">Created by manuel.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom site cursor -->
+    <div class="site-cursor" id="siteCursor" aria-hidden="true">
+        <div class="site-cursor__dot" aria-hidden="true"></div>
+        <div class="site-cursor__label" aria-hidden="true"></div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+</body>
+
+</html>

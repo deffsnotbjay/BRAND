@@ -1,0 +1,562 @@
+/* =========================================================
+   PROJECT DETAIL PAGE — project-detail.css
+   Split layout: fixed left sidebar + scrollable right panel
+   ========================================================= */
+
+/* ----------------------------------------------------------
+   PAGE BASE
+   ---------------------------------------------------------- */
+/* .detail-page {
+    background:
+        repeating-linear-gradient(to right,
+            rgba(10, 10, 10, 0.06) 0,
+            rgba(10, 10, 10, 0.06) 1px,
+            transparent 1px,
+            transparent 120px),
+        var(--light-bg);
+} */
+
+/* Wordmark — same as projects page */
+.page-wordmark {
+    position: fixed;
+    top: var(--nav-offset-top);
+    left: var(--container-pad);
+    z-index: 51;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: 0.02em;
+    color: var(--light-text);
+    pointer-events: auto;
+}
+
+.nav-link--active {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* ----------------------------------------------------------
+   DETAIL MAIN
+   Top padding clears the navbar, bottom for footer spacing
+   ---------------------------------------------------------- */
+.detail-main {
+    padding-top: calc(var(--nav-offset-top) + var(--nav-height));
+}
+
+/* ----------------------------------------------------------
+   SPLIT WRAPPER
+   Left is fixed (removed from flow); right uses margin-left
+   to sit alongside it.
+   ---------------------------------------------------------- */
+.detail-split {
+    position: relative;
+}
+
+/* ----------------------------------------------------------
+   LEFT PANEL — truly fixed to the viewport
+   The panel stays pinned while the page scrolls.
+   JS in project-detail.js switches it to position:absolute
+   when the split section ends, so it doesn't float over
+   the related/footer sections.
+   ---------------------------------------------------------- */
+.detail-left {
+    position: fixed;
+    top: calc(var(--nav-offset-top) + var(--nav-height));
+    left: 0;
+    width: 840px;
+    height: calc(100vh - var(--nav-offset-top) - var(--nav-height));
+    overflow-y: auto;
+    /* Solid background hides page content scrolling behind */
+    background: var(--light-bg, #f5f4f0);
+    padding: 28px 48px 40px 36px;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    scrollbar-width: none;
+}
+
+.detail-left::-webkit-scrollbar {
+    display: none;
+}
+
+/* Back link */
+.detail-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-display);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(10, 10, 10, 0.5);
+    margin-bottom: 20px;
+    transition: color 0.2s ease;
+}
+
+.detail-back:hover {
+    color: var(--light-text);
+}
+
+/* Left body */
+.detail-left__body {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* Title */
+.detail-title {
+    margin: 0 0 14px;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(38px, 3.8vw, 58px);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--light-text);
+}
+
+/* Description */
+.detail-desc {
+    margin: 0 0 20px;
+    font-family: var(--font-ui);
+    font-size: 13.5px;
+    line-height: 1.75;
+    color: rgba(10, 10, 10, 0.6);
+    max-width: 32ch;
+}
+
+/* Meta table */
+.detail-meta {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0;
+    border-top: 1px solid rgba(10, 10, 10, 0.1);
+    margin-bottom: 20px;
+}
+
+.detail-meta__row {
+    display: contents;
+}
+
+.detail-meta__label,
+.detail-meta__value {
+    padding: 11px 0;
+    border-bottom: 1px solid rgba(10, 10, 10, 0.08);
+    font-family: var(--font-ui);
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.detail-meta__label {
+    color: rgba(10, 10, 10, 0.45);
+    padding-right: 20px;
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+.detail-meta__value {
+    color: var(--light-text);
+}
+
+/* Services */
+.detail-services__label {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    color: rgba(10, 10, 10, 0.45);
+    font-weight: 500;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.detail-services__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.detail-tag {
+    display: inline-block;
+    padding: 5px 12px;
+    border: 1px solid rgba(10, 10, 10, 0.18);
+    border-radius: 2px;
+    font-family: var(--font-display);
+    font-size: 12px;
+    color: var(--light-text);
+    letter-spacing: 0.04em;
+}
+
+/* Visit link */
+.detail-visit {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    font-family: var(--font-display);
+    font-size: 14px;
+    color: var(--light-text);
+    border-bottom: 1px solid rgba(10, 10, 10, 0.25);
+    padding-bottom: 2px;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.detail-visit:hover {
+    border-color: var(--light-text);
+}
+
+/* ----------------------------------------------------------
+   RIGHT PANEL
+   Offset by exactly the left panel's fixed width so they
+   sit side-by-side. Max-width keeps it readable.
+   ---------------------------------------------------------- */
+.detail-right {
+    margin-left: 840px;
+    max-width: 800px;
+}
+
+.detail-content {
+    padding: 0;
+}
+
+/* Hero image — first image in the right panel */
+.detail-hero-img {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 750px;
+    aspect-ratio: 3/2;
+    overflow: hidden;
+    background: #111;
+    display: block;
+}
+
+.detail-hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: none;
+    transform: none;
+    transition: none;
+    display: block;
+}
+
+/* Text section */
+.detail-text-section {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 20px 32px;
+    padding: 28px 44px;
+}
+
+.detail-section-label {
+    font-family: var(--font-display);
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(10, 10, 10, 0.45);
+    padding-top: 3px;
+    white-space: nowrap;
+}
+
+.detail-section-label::after {
+    content: ':';
+}
+
+.detail-section-body {
+    margin: 0;
+    font-family: var(--font-ui);
+    font-size: 14px;
+    line-height: 1.75;
+    color: rgba(10, 10, 10, 0.8);
+    max-width: 70ch;
+}
+
+/* Inline images — all subsequent images */
+.detail-inline-img {
+    width: 100%;
+    max-width: 750px;
+    overflow: hidden;
+    background: #111;
+    display: block;
+    margin-bottom: 18px; /* gap between consecutive images */
+}
+
+.detail-inline-img img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    filter: none;
+    transform: none;
+    transition: none;
+    aspect-ratio: 4 / 3;
+}
+
+/* ----------------------------------------------------------
+   RELATED PROJECTS  (below the split, full-width)
+   ---------------------------------------------------------- */
+/* .detail-related {
+    border-top: 1px solid rgba(10, 10, 10, 0.1);
+    background:
+        repeating-linear-gradient(to right,
+            rgba(10, 10, 10, 0.06) 0,
+            rgba(10, 10, 10, 0.06) 1px,
+            transparent 1px,
+            transparent 120px),
+        var(--light-bg);
+} */
+
+.detail-related__inner {
+    padding: 80px 80px 100px;
+    max-width: 1520px;
+    margin: 0 auto;
+}
+
+.detail-related__heading {
+    margin: 0 0 52px;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(28px, 4vw, 52px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--light-text);
+}
+
+/* Two-column equal grid — same as projects page */
+.detail-related__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+}
+
+/* Related card */
+.rel-card {
+    padding: 40px 0;
+    cursor: none;
+    outline: none;
+    overflow: hidden;
+    text-decoration: none;
+    display: block;
+    position: relative;
+}
+
+.rel-card:first-child {
+    padding-right: 48px;
+}
+
+.rel-card:last-child {
+    padding-left: 48px;
+}
+
+.rel-card__media {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: #1a1a1a;
+    display: block;
+}
+
+.rel-card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%) brightness(0.8);
+    transition:
+        filter 0.65s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: filter, transform;
+    display: block;
+}
+
+.rel-card:hover .rel-card__media img,
+.rel-card:focus-visible .rel-card__media img {
+    filter: grayscale(0%) brightness(1);
+    transform: scale(1.06);
+}
+
+.rel-card__meta {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 14px;
+    font-family: var(--font-display);
+}
+
+.rel-card__title {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.35;
+    color: rgba(10, 10, 10, 0.78);
+}
+
+.rel-card__sub {
+    font-size: 13px;
+    font-weight: 400;
+    color: rgba(10, 10, 10, 0.5);
+}
+
+.rel-card__year {
+    font-size: 15px;
+    color: rgba(10, 10, 10, 0.55);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.rel-card:focus-visible {
+    box-shadow: 0 0 0 2px var(--accent);
+}
+
+/* ----------------------------------------------------------
+   RESPONSIVE
+   ---------------------------------------------------------- */
+
+/* Large laptops — shrink left a touch */
+@media (max-width: 1400px) {
+    .detail-left {
+        width: 480px;
+        padding-left: 60px;
+        padding-right: 40px;
+    }
+    .detail-right {
+        margin-left: 480px;
+    }
+}
+
+/* Smaller desktops */
+@media (max-width: 1200px) {
+    .detail-left {
+        width: 380px;
+        padding-left: 40px;
+        padding-right: 32px;
+    }
+    .detail-right {
+        margin-left: 380px;
+        max-width: 680px;
+    }
+    .detail-text-section {
+        padding: 40px 48px;
+    }
+}
+
+/* Tablet landscape */
+@media (max-width: 1024px) {
+    .detail-left {
+        width: 300px;
+        padding: 40px 24px 40px 32px;
+    }
+    .detail-title {
+        font-size: clamp(28px, 3.5vw, 42px);
+    }
+    .detail-right {
+        margin-left: 300px;
+        max-width: none;
+    }
+    .detail-text-section {
+        padding: 36px 32px;
+        grid-template-columns: 100px 1fr;
+    }
+    .detail-hero-img,
+    .detail-inline-img {
+        max-width: 100%;
+    }
+}
+
+/* Tablet portrait — stack layout */
+@media (max-width: 768px) {
+    .detail-main {
+        padding-top: calc(var(--nav-offset-top) + var(--nav-height) + 16px);
+    }
+
+    /* Remove fixed positioning entirely */
+    .detail-left {
+        position: static !important;
+        width: 100% !important;
+        height: auto !important;
+        overflow: visible !important;
+        background: var(--light-bg, #f5f4f0);
+        border-bottom: 1px solid rgba(10, 10, 10, 0.1);
+        padding: 32px 24px 40px 24px;
+    }
+
+    .detail-right {
+        margin-left: 0 !important;
+        max-width: 100% !important;
+    }
+
+    .detail-text-section {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 28px 24px;
+    }
+
+    .detail-section-label::after {
+        content: '';
+    }
+
+    /* Images: inset from screen edges like the related cards */
+    .detail-hero-img,
+    .detail-inline-img {
+        width: calc(100% - 40px);
+        max-width: calc(100% - 40px);
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .detail-title{
+        font-size: 55px;
+    }
+
+    .detail-back {
+        margin-bottom: 28px;
+    }
+
+    .detail-related__inner {
+        padding: 48px 24px 60px;
+    }
+
+    .detail-related__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rel-card:first-child {
+        padding-right: 0;
+        padding-bottom: 32px;
+        border-right: none;
+        border-bottom: 1px solid rgba(10, 10, 10, 0.1);
+    }
+
+    .rel-card:last-child {
+        padding-left: 0;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .page-wordmark {
+        font-size: 17px;
+    }
+
+    .detail-title {
+        font-size: 38px;
+    }
+
+    .detail-desc {
+        font-size: 13px;
+        max-width: 100%;
+    }
+
+    .detail-text-section {
+        padding: 24px 16px;
+    }
+
+    .detail-section-body {
+        font-size: 13.5px;
+    }
+
+    .detail-related__inner {
+        padding: 36px 16px 48px;
+    }
+
+    .detail-related__heading {
+        font-size: clamp(22px, 6vw, 32px);
+        margin-bottom: 32px;
+    }
+}

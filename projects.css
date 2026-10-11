@@ -1,0 +1,329 @@
+/* =========================================================
+   PROJECTS PAGE — projects.css
+   Layered on top of styles.css (shared tokens + components)
+   ========================================================= */
+
+/* ----------------------------------------------------------
+   PAGE-LEVEL RESETS
+   Remove the fixed hero; body scrolls normally here
+   ---------------------------------------------------------- */
+.projects-page {
+    background:
+        repeating-linear-gradient(to right,
+            rgba(10, 10, 10, 0.06) 0,
+            rgba(10, 10, 10, 0.06) 1px,
+            transparent 1px,
+            transparent 160px),
+        var(--light-bg);
+}
+
+/* ----------------------------------------------------------
+   WORDMARK (mirrors .hero-wordmark but for a scrolling page)
+   ---------------------------------------------------------- */
+.page-wordmark {
+    position: fixed;
+    top: var(--nav-offset-top);
+    left: var(--container-pad);
+    z-index: 51;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: 0.02em;
+    color: var(--light-text);
+    pointer-events: auto;
+}
+
+/* Active nav link indicator */
+.nav-link--active {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: default;
+}
+
+/* ----------------------------------------------------------
+   PROJECTS MAIN WRAPPER
+   Gives the page top padding to clear the fixed navbar
+   ---------------------------------------------------------- */
+.projects-main {
+    padding-top: calc(var(--nav-offset-top) + var(--nav-height) + 60px);
+}
+
+/* ----------------------------------------------------------
+   PAGE HEADER  (hero-style text block)
+   ---------------------------------------------------------- */
+.projects-hero {
+    position: relative;
+    z-index: 2;
+}
+
+.projects-hero__inner {
+    padding: 60px 80px 80px;
+    max-width: 1520px;
+    margin: 0 auto;
+}
+
+.projects-hero__label {
+    margin: 0 0 28px;
+    font-family: var(--font-display);
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--light-text);
+}
+
+.projects-hero__head {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.projects-hero__headline {
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: clamp(36px, 5.5vw, 72px);
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    color: var(--light-text);
+}
+
+.projects-hero__support {
+    margin: 8px 0 0;
+    max-width: 340px;
+    justify-self: end;
+    font-family: var(--font-ui);
+    font-size: 14px;
+    line-height: 1.65;
+    color: rgba(10, 10, 10, 0.65);
+}
+
+/* Thin divider below hero head */
+.projects-hero__inner::after {
+    content: "";
+    display: block;
+    margin-top: 20px;
+    /* border-top: 1px solid rgba(10, 10, 10, 0.1); */
+}
+
+/* ----------------------------------------------------------
+   TWO-COLUMN EQUAL GRID
+   ---------------------------------------------------------- */
+.projects-grid-section {
+    position: relative;
+    z-index: 2;
+}
+
+.projects-grid-inner {
+    padding: 0 80px 40px;
+    max-width: 1520px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* Each row is a 2-column flex strip with a bottom divider */
+.pg-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    /* border-bottom: 1px solid rgba(10, 10, 10, 0.1); */
+}
+
+.pg-row:first-child {
+    border-top: none; /* no double-line after the hero divider */
+}
+
+/* ----------------------------------------------------------
+   PROJECT CARD
+   ---------------------------------------------------------- */
+.pg-card {
+    padding: 40px 0;
+    cursor: none; /* rely on custom cursor */
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    display: block;        /* anchor override */
+    color: inherit;        /* anchor override */
+    text-decoration: none; /* anchor override */
+}
+
+/* Vertical divider between left and right card */
+.pg-card:first-child {
+    /* border-right: 1px solid rgba(10, 10, 10, 0.1); */
+    padding-right: 48px;
+}
+
+.pg-card:last-child {
+    padding-left: 48px;
+}
+
+/* Image wrapper */
+.pg-card__media {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: #1a1a1a;
+    display: block;
+}
+
+/* Image — grayscale + dim base, colour + zoom on hover (same as index) */
+.pg-card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%) brightness(0.8);
+    transition:
+        filter 0.65s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: filter, transform;
+    display: block;
+}
+
+.pg-card:hover .pg-card__media img,
+.pg-card:focus-visible .pg-card__media img {
+    filter: grayscale(0%) brightness(1);
+    transform: scale(1.06);
+}
+
+/* Meta bar */
+.pg-card__meta {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 14px;
+    font-family: var(--font-display);
+}
+
+.pg-card__title {
+    font-size: 17px;
+    line-height: 1.35;
+    color: rgba(10, 10, 10, 0.78);
+    font-weight: 500;
+}
+
+.pg-card__sub {
+    font-size: 13px;
+    font-weight: 400;
+    color: rgba(10, 10, 10, 0.5);
+}
+
+.pg-card__year {
+    font-size: 15px;
+    color: rgba(10, 10, 10, 0.55);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* Focus ring for keyboard navigation */
+.pg-card:focus-visible {
+    box-shadow: 0 0 0 2px var(--accent);
+}
+
+/* ----------------------------------------------------------
+   CTA STRIP
+   ---------------------------------------------------------- */
+.projects-cta {
+    background: var(--nav-bg);
+    color: var(--text);
+    position: relative;
+    z-index: 2;
+}
+
+.projects-cta__inner {
+    padding: 100px 80px 110px;
+    max-width: 1520px;
+    margin: 0 auto;
+    display: grid;
+    gap: 20px;
+}
+
+.projects-cta__label {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(240, 236, 228, 0.55);
+}
+
+.projects-cta__headline {
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(32px, 4.8vw, 64px);
+    line-height: 1.04;
+    letter-spacing: -0.015em;
+    color: var(--text);
+}
+
+.projects-cta__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    width: fit-content;
+    margin-top: 16px;
+    padding: 12px 20px;
+    border: 1px solid rgba(240, 236, 228, 0.4);
+    border-radius: 2px;
+    font-family: var(--font-display);
+    font-size: 16px;
+    color: var(--text);
+    transition: border-color 0.25s ease;
+}
+
+.projects-cta__btn:hover {
+    border-color: rgba(240, 236, 228, 0.85);
+}
+
+/* ----------------------------------------------------------
+   RESPONSIVE
+   ---------------------------------------------------------- */
+@media (max-width: 900px) {
+    .projects-hero__inner {
+        padding: 15px 28px 20px;
+    }
+
+    .projects-hero__head {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .projects-hero__support {
+        justify-self: start;
+    }
+
+    .projects-grid-inner {
+        padding: 0 28px 0px;
+    }
+
+    .pg-row {
+        grid-template-columns: 1fr;
+    }
+
+    .pg-card:first-child {
+        border-right: none;
+        padding-right: 0;
+        padding-bottom: 5px;
+    }
+
+    .pg-card:last-child {
+        padding-left: 0;
+    }
+
+    .projects-cta__inner {
+        padding: 70px 28px 80px;
+    }
+}
+
+@media (max-width: 600px) {
+    .page-wordmark {
+        font-size: 18px;
+    }
+
+    .projects-hero__headline {
+        font-size: clamp(32px, 8vw, 72px);
+    }
+}
